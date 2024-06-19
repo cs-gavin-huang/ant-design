@@ -120,7 +120,7 @@ describe('Collapse', () => {
     jest.useFakeTimers();
     const spiedRAF = jest
       .spyOn(window, 'requestAnimationFrame')
-      .mockImplementation(cb => setTimeout(cb, 16.66));
+      .mockImplementation((cb) => setTimeout(cb, 16.66));
 
     let setActiveKeyOuter: React.Dispatch<React.SetStateAction<React.Key | undefined>>;
     const Test = () => {
@@ -153,7 +153,7 @@ describe('Collapse', () => {
   });
 
   describe('expandIconPosition', () => {
-    ['left', 'right'].forEach(pos => {
+    ['left', 'right'].forEach((pos) => {
       it(`warning for legacy '${pos}'`, () => {
         render(
           <Collapse expandIconPosition={pos}>
@@ -176,5 +176,30 @@ describe('Collapse', () => {
         expect(container.querySelector('.ant-collapse-icon-position-end')).toBeTruthy();
       });
     });
+  });
+
+  // pull request: https://github.com/ant-design/ant-design/pull/49395
+  it('Check expandIcon aria-label value', () => {
+    const { container, rerender } = render(
+      <Collapse activeKey="1">
+        <Collapse.Panel header="header" key="1" />
+      </Collapse>,
+    );
+
+    expect(container.querySelector('.ant-collapse-arrow')).toHaveAttribute(
+      'aria-label',
+      'expanded',
+    );
+
+    rerender(
+      <Collapse>
+        <Collapse.Panel header="header" key="1" />
+      </Collapse>,
+    );
+
+    expect(container.querySelector('.ant-collapse-arrow')).toHaveAttribute(
+      'aria-label',
+      'collapsed',
+    );
   });
 });
