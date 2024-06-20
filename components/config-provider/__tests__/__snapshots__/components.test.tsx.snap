@@ -12272,7 +12272,7 @@ exports[`ConfigProvider components Collapse configProvider 1`] = `
         class="config-collapse-expand-icon"
       >
         <span
-          aria-label="right"
+          aria-label="collapsed"
           class="anticon anticon-right config-collapse-arrow"
           role="img"
         >
@@ -12319,7 +12319,7 @@ exports[`ConfigProvider components Collapse configProvider componentDisabled 1`]
         class="config-collapse-expand-icon"
       >
         <span
-          aria-label="right"
+          aria-label="collapsed"
           class="anticon anticon-right config-collapse-arrow"
           role="img"
         >
@@ -12366,7 +12366,7 @@ exports[`ConfigProvider components Collapse configProvider componentSize large 1
         class="config-collapse-expand-icon"
       >
         <span
-          aria-label="right"
+          aria-label="collapsed"
           class="anticon anticon-right config-collapse-arrow"
           role="img"
         >
@@ -12413,7 +12413,7 @@ exports[`ConfigProvider components Collapse configProvider componentSize middle 
         class="config-collapse-expand-icon"
       >
         <span
-          aria-label="right"
+          aria-label="collapsed"
           class="anticon anticon-right config-collapse-arrow"
           role="img"
         >
@@ -12460,7 +12460,7 @@ exports[`ConfigProvider components Collapse configProvider virtual and dropdownM
         class="ant-collapse-expand-icon"
       >
         <span
-          aria-label="right"
+          aria-label="collapsed"
           class="anticon anticon-right ant-collapse-arrow"
           role="img"
         >
@@ -12507,7 +12507,7 @@ exports[`ConfigProvider components Collapse normal 1`] = `
         class="ant-collapse-expand-icon"
       >
         <span
-          aria-label="right"
+          aria-label="collapsed"
           class="anticon anticon-right ant-collapse-arrow"
           role="img"
         >
@@ -12554,7 +12554,7 @@ exports[`ConfigProvider components Collapse prefixCls 1`] = `
         class="prefix-Collapse-expand-icon"
       >
         <span
-          aria-label="right"
+          aria-label="collapsed"
           class="anticon anticon-right prefix-Collapse-arrow"
           role="img"
         >

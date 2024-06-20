@@ -60,6 +60,7 @@ const Collapse: CompoundedComponent = (props) => {
     bordered = true,
     ghost,
     expandIconPosition = 'start',
+    activeKey,
   } = props;
   const prefixCls = getPrefixCls('collapse', customizePrefixCls);
 
@@ -105,6 +106,7 @@ const Collapse: CompoundedComponent = (props) => {
     },
     className,
   );
+
   const openMotion: CSSMotionProps = {
     ...collapseMotion,
     motionAppear: false,
@@ -124,7 +126,13 @@ const Collapse: CompoundedComponent = (props) => {
         };
         return cloneElement(child, childProps);
       }
-      return child;
+
+      const key = child.key !== null ? String(child.key) : String(index);
+      const isActive = Array.isArray(activeKey) ? activeKey.includes(key) : activeKey === key;
+
+      return cloneElement(child, {
+        isActive,
+      });
     });
   };
 
